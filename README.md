@@ -73,17 +73,17 @@ To tear down all provisioned infrastructure:
 terraform destroy
 
 ### Project Structure
-.
-├── main.tf           # Main Terraform configuration
-├── variables.tf      # Variable declarations
-├── outputs.tf        # Output configurations
-├── terraform.tfvars  # Variable values (git-ignored)
-├── modules/          # Reusable modules
-│   ├── networking/
-│   └── compute/
-├── images/           # Documentation images
-│   └── architecture.svg
-└── README.md         # This file
+        .
+        ├── main.tf           # Main Terraform configuration
+        ├── variables.tf      # Variable declarations
+        ├── outputs.tf        # Output configurations
+        ├── terraform.tfvars  # Variable values (git-ignored)
+        ├── modules/          # Reusable modules
+        │   ├── networking/
+        │   └── compute/
+        ├── images/           # Documentation images
+        │   └── architecture.svg
+        └── README.md         # This file
 
 ### Security Considerations
 
@@ -98,18 +98,18 @@ Restrict security group rules to only necessary ports and source IPs
 
 ### _SSH Connection Problems_
 
-        Verify that your security groups allow SSH access
-        Ensure proper permissions on your private key file (chmod 400)
-        Confirm you're using the correct username for the OS
+    Verify that your security groups allow SSH access
+    Ensure proper permissions on your private key file (chmod 400)
+    Confirm you're using the correct username for the OS
 
 
 ### _Terraform State Corruption_
 
-        Consider using remote state with locking for team environments
-        Backup your terraform.tfstate file regularly
+    Consider using remote state with locking for team environments
+    Backup your terraform.tfstate file regularly
 
 
 ### _Resource Creation Failures_
 
-        Check cloud provider quotas and limits
-        Review cloud provider console for detailed error messages
+    Check cloud provider quotas and limits
+    Review cloud provider console for detailed error messages
