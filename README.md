@@ -15,11 +15,11 @@ Git for version control
 ## **Architecture**
 The deployment creates the following resources: [ref above screenshot]
 
-Virtual Private Cloud (VPC) - 2 VPCs in us-east-1 and 1 in us-west-1, with proper networking \
+- Virtual Private Cloud (VPC) - 2 VPCs in us-east-1 and 1 in us-west-1, with proper networking 
     - i.e. peering connections between VPC for bilateral communication
-Compute instances with SSH access
-Security groups to manage access
-Supporting resources for monitoring and management (enable flow logs and store in S3 bucket)
+- Compute instances with SSH access
+- Security groups to manage access
+- Supporting resources for monitoring and management (enable flow logs and store in S3 bucket)
 
 
 # [Follow steps below if you'd like to try this project]
