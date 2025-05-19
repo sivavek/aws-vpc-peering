@@ -24,11 +24,12 @@ Supporting resources for monitoring and management (enable flow logs and store i
 
 # [Follow steps below if you'd like to try this project]
 
-Getting Started
-1. Clone the Repository
+## Getting Started
+### 1. Clone the Repository
 bashgit clone https://github.com/yourusername/your-terraform-project.git
 cd your-terraform-project
-2. Generate SSH Key Pair
+
+### 2. Generate SSH Key Pair
 If you don't already have an SSH key pair:
 bashssh-keygen -t rsa -b 2048 -f ~/.ssh/terraform_key
 This will create:
@@ -38,31 +39,40 @@ This will create:
 
 Set proper permissions for your private key:
 bashchmod 400 ~/.ssh/terraform_key
-3. Update Configuration
+
+### 3. Update Configuration
 Edit the variables.tf file to set your preferences, or create a terraform.tfvars file:
 hcl# terraform.tfvars
 region = "us-west-2"
 instance_type = "t2.micro"
 ssh_public_key_path = "~/.ssh/terraform_key.pub"
-4. Initialize Terraform
-bashterraform init
-5. Preview Changes
-bashterraform plan
-6. Apply Configuration
-bashterraform apply
+
+### 4. Initialize Terraform
+terraform init
+
+### 5. Preview Changes
+terraform plan
+
+### 6. Apply Configuration
+terraform apply
+
 Confirm by typing yes when prompted.
-7. Access Resources
+
+### 7. Access Resources
 After deployment completes, Terraform will output information about the created resources, including IP addresses. Connect using:
-bashssh -i ~/.ssh/terraform_key username@instance_ip
-Managing the Infrastructure
-Updating Resources
+ssh -i ~/.ssh/terraform_key username@instance_ip
+
+## Managing the Infrastructure
+### Updating Resources
 After making changes to the Terraform files:
-bashterraform plan  # Preview changes
+terraform plan  # Preview changes
 terraform apply  # Apply changes
-Destroying Resources
+
+### Destroying Resources
 To tear down all provisioned infrastructure:
-bashterraform destroy
-Project Structure
+terraform destroy
+
+### Project Structure
 .
 ├── main.tf           # Main Terraform configuration
 ├── variables.tf      # Variable declarations
@@ -74,43 +84,32 @@ Project Structure
 ├── images/           # Documentation images
 │   └── architecture.svg
 └── README.md         # This file
-Security Considerations
+
+### Security Considerations
 
 Private keys should never be committed to git
 Use a .gitignore file to prevent accidental commits of sensitive files
 Consider using a secret management solution for production environments
 Restrict security group rules to only necessary ports and source IPs
 
-Troubleshooting
-Common Issues
+## Troubleshooting
 
-SSH Connection Problems
+### Common Issues
 
-Verify that your security groups allow SSH access
-Ensure proper permissions on your private key file (chmod 400)
-Confirm you're using the correct username for the OS
+### _SSH Connection Problems_
 
-
-Terraform State Corruption
-
-Consider using remote state with locking for team environments
-Backup your terraform.tfstate file regularly
+        Verify that your security groups allow SSH access
+        Ensure proper permissions on your private key file (chmod 400)
+        Confirm you're using the correct username for the OS
 
 
-Resource Creation Failures
+### _Terraform State Corruption_
 
-Check cloud provider quotas and limits
-Review cloud provider console for detailed error messages
+        Consider using remote state with locking for team environments
+        Backup your terraform.tfstate file regularly
 
 
+### _Resource Creation Failures_
 
-Contributing
-
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+        Check cloud provider quotas and limits
+        Review cloud provider console for detailed error messages
