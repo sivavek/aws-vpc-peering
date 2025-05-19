@@ -1,6 +1,6 @@
 # [aws-vpc-peering] **Terraform Infrastructure Deployment Project**
 
-<img width="1244" alt="image" src="https://github.com/user-attachments/assets/05d962f8-77e6-40f1-b9e5-b228ef47c052" />
+<img width="1244" alt="image" src="[https://github.com/user-attachments/assets/05d962f8-77e6-40f1-b9e5-b228ef47c052](https://github.com/sivavek/aws-vpc-peering/blob/main/images/complete%20arch%20diag.png)" />
 
 ## **Overview**
 This project contains Terraform scripts to provision and manage cloud infrastructure in an automated, version-controlled way. The infrastructure includes compute resources with SSH access configured for secure management.
