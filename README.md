@@ -1,17 +1,18 @@
-# [aws-vpc-peering] # Terraform Infrastructure Deployment Project
+# [aws-vpc-peering] **Terraform Infrastructure Deployment Project**
 
 <img width="1244" alt="image" src="https://github.com/user-attachments/assets/05d962f8-77e6-40f1-b9e5-b228ef47c052" />
 
-Overview
+## **Overview**
 This project contains Terraform scripts to provision and manage cloud infrastructure in an automated, version-controlled way. The infrastructure includes compute resources with SSH access configured for secure management.
-Prerequisites
+
+## **Prerequisites**
 
 Terraform (v1.0.0+)
 Cloud provider CLI tools (AWS CLI, Azure CLI, or GCP CLI)
 SSH key pair for secure access
 Git for version control
 
-Architecture
+## **Architecture**
 The deployment creates the following resources: [ref above screenshot]
 
 Virtual Private Cloud (VPC) - 2 VPCs in us-east-1 and 1 in us-west-1, with proper networking \
@@ -21,7 +22,7 @@ Security groups to manage access
 Supporting resources for monitoring and management (enable flow logs and store in S3 bucket)
 
 
-[Follow steps below if you'd like to try this project]
+# [Follow steps below if you'd like to try this project]
 
 Getting Started
 1. Clone the Repository
